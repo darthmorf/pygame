@@ -65,7 +65,7 @@ while running:
     drawList.append(mainSurface.fill(BGCOLOUR, player.rect))
 
     # gravity effects
-    if player.jumping == False:
+    if not player.jumping:
         player.y += player.gravitySpeed
         player.updatePos()
 
@@ -79,7 +79,7 @@ while running:
         player.canJump = False
         
     #movement logic
-    if player.jumping == True:
+    if player.jumping:
         player.y -= player.jumpSpeedTracker
         player.jumpHeightTracker += player.jumpSpeedTracker
         player.updatePos()
