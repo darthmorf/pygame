@@ -1,5 +1,4 @@
 import pygame
-import utils
 import player
 import tiles
 
